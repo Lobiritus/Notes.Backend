@@ -16,6 +16,7 @@ namespace Notes.Application.Common.Mapping
                 .Where(type => type.GetInterfaces()
                 .Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IMapWith<>)))
                 .ToList();
+            
 
             foreach (var type in types)
             {
